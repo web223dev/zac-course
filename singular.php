@@ -7,7 +7,7 @@
             <?php endwhile; else : ?>
             <?php get_template_part('template-parts/content', 'none') ?>
         <?php endif; ?>
-        <p>Template: index.php</p>
+        <p>Template: Singular.php</p>
     </main>
 </div>
 
