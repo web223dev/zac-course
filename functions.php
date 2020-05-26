@@ -27,7 +27,7 @@ register_nav_menus( [
 
 // Setup Widget Areas
 function wphierarchy_widgets_init(){
-    $args = [
+    $main_args = [
         'name'          => esc_html__('Main Sidebar', 'wphierarchy'),
         'id'            => 'main-sidebar',
         'description'   => esc_html__('Add widgets for main sidebar here', 'wphierarchy'),
@@ -36,7 +36,17 @@ function wphierarchy_widgets_init(){
         'before_title'  => '<h2 class="widget-title">',
         'after_title'   => '</h2>'
     ];
-    register_sidebar( $args );
+    $page_args = [
+        'name'          => esc_html__('Page Sidebar', 'wphierarchy'),
+        'id'            => 'page-sidebar',
+        'description'   => esc_html__('Add widgets for page sidebar here', 'wphierarchy'),
+        'before_widget' => '<section class="widget">',
+        'after_widget'  => '</section>',
+        'before_title'  => '<h2 class="widget-title">',
+        'after_title'   => '</h2>'
+    ];
+    register_sidebar( $main_args );
+    register_sidebar( $page_args );
 }
 
 add_action( 'widgets_init', 'wphierarchy_widgets_init');
