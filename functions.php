@@ -45,8 +45,19 @@ function wphierarchy_widgets_init(){
         'before_title'  => '<h2 class="widget-title">',
         'after_title'   => '</h2>'
     ];
+    $frontpage_args = [
+        'name'          => esc_html__('Front Page Sidebar', 'wphierarchy'),
+        'id'            => 'front-sidebar',
+        'description'   => esc_html__('Add widgets for front page sidebar here', 'wphierarchy'),
+        'before_widget' => '<section class="widget">',
+        'after_widget'  => '</section>',
+        'before_title'  => '<h2 class="widget-title">',
+        'after_title'   => '</h2>'
+    ];
+
     register_sidebar( $main_args );
     register_sidebar( $page_args );
+    register_sidebar( $frontpage_args );
 }
 
 add_action( 'widgets_init', 'wphierarchy_widgets_init');
