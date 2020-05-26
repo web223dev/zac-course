@@ -13,7 +13,7 @@
                     </header>
 
                     <div class="entry-content">
-                        <p><a href="<?php echo $post->guid; ?>">Download</a></p>
+                        <p><img src="<?php echo esc_url( $post->guid ); ?>" alt="<?php echo esc_attr(get_the_title()); ?>"></p>
                         <?php the_content(); ?>
                     </div>
 
@@ -29,7 +29,7 @@
 
         <?php endif; ?>
 
-        <p>Template: attachment.php</p>
+        <p>Template: image.php</p>
     </main>
 </div>
 
