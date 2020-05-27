@@ -15,9 +15,9 @@
         <?php endif; ?>
 
         <?php echo paginate_links(); ?>
-        
-        <p>Template: archive-portfolio.php</p>
+
     </main>
+    <p>Template: taxonomy-skills-php.php</p>
 </div>
 
 <?php get_footer(); ?>

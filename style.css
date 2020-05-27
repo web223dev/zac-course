@@ -57,6 +57,11 @@ a {
     text-decoration: none;
 }
 
+p {
+    width: 100%;
+    float: left;
+}
+
 pre {
     background: #222;
     padding: 10px;
@@ -139,7 +144,6 @@ footer.site-footer {
     word-wrap: break-word;
 }
 
-.single-portfolio #content,
 .page-template-template-splash #content,
 .page-id-1096 #content,
 .category-excerpt #content,
@@ -190,7 +194,7 @@ article.post {
     float: right;
 }
 
-.archive article.portfolio:nth-child(even) {
+.archive article.portfolio {
     margin-right: 5%;
 }
 
