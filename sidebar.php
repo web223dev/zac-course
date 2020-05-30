@@ -30,6 +30,8 @@
         wp_get_archives( $args )
     ?>
 
+    <p><?php get_calendar(); ?></p>
+
     <?php dynamic_sidebar('main-sidebar'); ?>
     
 </aside>
