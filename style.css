@@ -94,6 +94,30 @@ footer.site-footer {
     width: 80%;
 }
 
+#footer-menu li,
+.main-navigation li {
+    list-style-type: none;
+    display: inline-block;
+}
+
+#footer-menu li a,
+.main-navigation li a {
+    padding: 5px;
+}
+
+#footer-menu li:hover>a,
+.main-navigation li:hover>a {
+    color: #000;
+}
+
+#footer-menu li.current-menu-item>a,
+#footer-menu li.current-page-parent>a,
+.main-navigation li.current-menu-item>a,
+.main-navigation li.current-page-parent>a {
+    font-weight: bold;
+    color: #494329;
+}
+
 .main-navigation li {
     list-style-type: none;
     display: inline-block;
