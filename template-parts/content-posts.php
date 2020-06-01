@@ -9,6 +9,7 @@
     </header>
 
     <div class="entry-content">
+        <?php //the_content('Read More...'); ?>
         <?php the_excerpt(); ?>
     </div>
 </article>

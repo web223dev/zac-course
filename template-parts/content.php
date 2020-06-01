@@ -9,6 +9,7 @@
     </header>
 
     <div class="entry-content">
+        <?php //the_content('', true); ?>
         <?php the_content(); ?>
     </div>
 
