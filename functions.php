@@ -71,4 +71,10 @@ function wphierarchy_widgets_init(){
 }
 
 add_action( 'widgets_init', 'wphierarchy_widgets_init');
+
+// Change [...] to Readmore in excerpt function
+function wpdocs_excerpt_more( $more ) {
+    return '<a href="'.get_the_permalink().'" rel="nofollow">' . esc_html__('  Read More...') . '</a>';
+}
+add_filter( 'excerpt_more', 'wpdocs_excerpt_more' );
 ?>
