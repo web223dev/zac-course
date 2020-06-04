@@ -156,5 +156,21 @@ function wphooks_add_draft_to_titles( $post_id, $post ) {
   add_action( 'save_post', 'wphooks_add_draft_to_titles' );
 
 
+// PRACTICE 1 - Load Admin Stylesheet
+function wphooks_draft_mode_styles() {
 
+    global $post;
+  
+    if( ! $post ) return;
+  
+    if( 'draft' === $post->post_status ) {
+  
+      wp_enqueue_style( 'wphooks-admin-css', get_stylesheet_directory_uri() . '/assets/css/admin.css', [], time(), 'all' );
+      add_editor_style( 'assets/css/visual-editor.css' );
+  
+    }
+  
+  
+}
+add_action( 'admin_enqueue_scripts', 'wphooks_draft_mode_styles' );
 ?>
