@@ -21,13 +21,23 @@ function wphierarchy_enqueue_styles(){
 }
 add_action('wp_enqueue_scripts', 'wphierarchy_enqueue_styles');
 
-// Load in our CSS
+// Load in our Javascript
 function wphierarchy_enqueue_scripts(){
     // wp_enqueue_script( 'theme-js', get_stylessheet_directory_uri() . '/assets/js/theme.js', [], time(), true );
     wp_enqueue_script( 'jquery-theme-js', get_stylesheet_directory_uri() . '/assets/js/jquery.theme.js', ['jquery'], time(), true );
+
+    if( is_singular() && comments_open() ){
+        wp_enqueue_script( 'comment-reply' );
+    }
 }
 add_action('wp_enqueue_scripts', 'wphierarchy_enqueue_scripts');
 
+// Loop End Marketing 
+function wphierarchy_end_marketing(){
+    if( !in_the_loop() ) return;
+    locate_template('template-parts/post-end-marketing.php', true);
+}
+add_action( 'loop_end', 'wphierarchy_end_marketing' );
 
 // Register Menu Locations
 register_nav_menus( [
