@@ -96,7 +96,19 @@ function wphooks_before_footer_message(){
 
 add_action('wphooks_before_footer', 'wphooks_before_footer_message', 10);
 
+// Template redirect for Members Page
+function wphierarchy_members_logged_out_redirect(){
+    if( is_page( 'members' ) && ! is_user_logged_in() ){
+        wp_redirect( home_url( '/sign-up/'));
+        die;
+    }
+    if( is_page('sign-up') && is_user_logged_in()){
+        wp_redirect( home_url( '/members/'));
+        die;
+    }
+}
 
+add_action( 'template_redirect', 'wphierarchy_members_logged_out_redirect', 10);
 
 
 
