@@ -77,4 +77,19 @@ function wpdocs_excerpt_more( $more ) {
     return '<a href="'.get_the_permalink().'" rel="nofollow">' . esc_html__('  Read More...') . '</a>';
 }
 add_filter( 'excerpt_more', 'wpdocs_excerpt_more' );
+
+// Display custom footer message
+function wphooks_before_footer_message(){
+    // echo '<p>My Custom footer text!</p>';
+    locate_template('template-parts/before-footer.php', true);
+}
+
+add_action('wphooks_before_footer', 'wphooks_before_footer_message', 10);
+
+
+
+
+
+
+
 ?>

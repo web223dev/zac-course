@@ -1,5 +1,8 @@
         </div> <!-- #content -->
         <footer id="colophon" class="site-footer" role="contentinfo">
+
+            <?php do_action('wphooks_before_footer'); ?>
+
             <?php
                 $args = [
                     // Location pickable in Customizer
