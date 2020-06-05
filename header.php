@@ -9,6 +9,9 @@
 </head>
 
 <body <?php body_class(); ?>>
+    <?php
+        // R_Debug::list_live_hooks();
+    ?>
     <div id="page">
 
         <a href="#content" class="skip-link screen-reader-text">

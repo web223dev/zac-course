@@ -13,6 +13,9 @@ add_theme_support( 'custom-logo');
 add_theme_support( 'customize-selective-refresh-widgets' );
 add_theme_support( 'starter-content');
 
+// Include R Debug
+require( dirname(__FILE__) . '/lib/r-debug.php' );
+
 // Load in our CSS
 function wphierarchy_enqueue_styles(){
     wp_enqueue_style('font-css', 'https://fonts.googleapis.com/css?family=Open+Sans|Varela+Round');

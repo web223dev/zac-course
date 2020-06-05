@@ -4,6 +4,7 @@
     // print_r($wp_actions);
     // print_r($wp_filter['wp_enqueue_scripts']);
     // echo '</pre>';
+    // R_Debug::list_hooks();
 ?>
 <div id="secondary" class="content-area extended">
     <main id="main" class="site-main" role="main">
